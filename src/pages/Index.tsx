@@ -1,34 +1,22 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Mail, Linkedin, Globe, Briefcase, User, Users, Settings } from "lucide-react";
-
 const Index = () => {
-  const skills = [
-    "Digital Strategy", "Congressional Operations", "Technical Leadership", 
-    "Project Management", "Policy Implementation", "Team Management",
-    "Government Relations", "Digital Communications", "Strategic Planning"
-  ];
-
-  const experiences = [
-    {
-      title: "Digital Director",
-      organization: "U.S. Congress",
-      period: "Current",
-      description: "Leading digital initiatives and technical operations for a senior Congressional member, managing strategic technology implementations and digital communications."
-    },
-    {
-      title: "Technical Leadership",
-      organization: "Various Organizations",
-      period: "2018-Present",
-      description: "Providing technical expertise and leadership across multiple projects, with focus on digital transformation and operational efficiency."
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+  const skills = ["Digital Strategy", "Congressional Operations", "Technical Leadership", "Project Management", "Policy Implementation", "Team Management", "Government Relations", "Digital Communications", "Strategic Planning"];
+  const experiences = [{
+    title: "Digital Director",
+    organization: "U.S. Congress",
+    period: "Current",
+    description: "Leading digital initiatives and technical operations for a senior Congressional member, managing strategic technology implementations and digital communications."
+  }, {
+    title: "Technical Leadership",
+    organization: "Various Organizations",
+    period: "2018-Present",
+    description: "Providing technical expertise and leadership across multiple projects, with focus on digital transformation and operational efficiency."
+  }];
+  return <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Header */}
       <header className="bg-white/80 backdrop-blur-sm border-b border-slate-200 sticky top-0 z-50">
         <div className="max-w-6xl mx-auto px-6 py-4">
@@ -62,7 +50,7 @@ const Index = () => {
             <h1 className="text-5xl font-bold text-slate-900 mb-4 animate-fade-in">
               Michael J. Russell
             </h1>
-            <p className="text-2xl text-blue-600 font-semibold mb-6">
+            <p className="text-2xl font-semibold mb-6 text-blue-500">
               Digital Director | Technical Leader | Congressional Operations
             </p>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
@@ -150,8 +138,7 @@ const Index = () => {
           </div>
 
           <div className="space-y-8">
-            {experiences.map((experience, index) => (
-              <Card key={index} className="border-l-4 border-l-blue-600 shadow-lg">
+            {experiences.map((experience, index) => <Card key={index} className="border-l-4 border-l-blue-600 shadow-lg">
                 <CardHeader>
                   <div className="flex justify-between items-start">
                     <div>
@@ -166,8 +153,7 @@ const Index = () => {
                 <CardContent>
                   <p className="text-slate-600">{experience.description}</p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -181,15 +167,9 @@ const Index = () => {
           </div>
 
           <div className="flex flex-wrap justify-center gap-3">
-            {skills.map((skill, index) => (
-              <Badge 
-                key={index} 
-                variant="secondary" 
-                className="px-4 py-2 text-sm bg-blue-100 text-blue-800 hover:bg-blue-200 transition-colors cursor-default"
-              >
+            {skills.map((skill, index) => <Badge key={index} variant="secondary" className="px-4 py-2 text-sm bg-blue-100 text-blue-800 hover:bg-blue-200 transition-colors cursor-default">
                 {skill}
-              </Badge>
-            ))}
+              </Badge>)}
           </div>
         </div>
       </section>
@@ -239,8 +219,6 @@ const Index = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
