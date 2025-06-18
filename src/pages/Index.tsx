@@ -47,7 +47,7 @@ const Index = () => {
             <div className="w-32 h-32 bg-gradient-to-br from-blue-600 to-blue-800 rounded-full mx-auto mb-6 flex items-center justify-center shadow-xl">
               <User className="w-16 h-16 text-white" />
             </div>
-            <h1 className="text-5xl font-bold text-slate-900 mb-4 animate-fade-in">
+            <h1 className="font-bold text-slate-900 mb-4 animate-fade-in text-3xl">
               Michael J. Russell
             </h1>
             <p className="text-2xl font-semibold mb-6 text-blue-500">
