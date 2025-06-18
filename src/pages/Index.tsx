@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Mail, Linkedin, Globe, Briefcase, User, Users, Settings } from "lucide-react";
+
 const Index = () => {
   const skills = ["Digital Strategy", "Congressional Operations", "Technical Leadership", "Project Management", "Policy Implementation", "Team Management", "Government Relations", "Digital Communications", "Strategic Planning"];
   const experiences = [{
@@ -16,6 +17,7 @@ const Index = () => {
     period: "2018-Present",
     description: "Providing technical expertise and leadership across multiple projects, with focus on digital transformation and operational efficiency."
   }];
+
   return <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Header */}
       <header className="bg-white/80 backdrop-blur-sm border-b border-slate-200 sticky top-0 z-50">
@@ -60,9 +62,11 @@ const Index = () => {
             </p>
           </div>
           <div className="flex justify-center space-x-4">
-            <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
-              <Mail className="w-4 h-4 mr-2" />
-              Get in Touch
+            <Button size="lg" className="bg-blue-600 hover:bg-blue-700" asChild>
+              <a href="mailto:michael@example.com">
+                <Mail className="w-4 h-4 mr-2" />
+                Get in Touch
+              </a>
             </Button>
             <Button variant="outline" size="lg">
               <Briefcase className="w-4 h-4 mr-2" />
@@ -185,9 +189,11 @@ const Index = () => {
           <Card className="max-w-md mx-auto shadow-lg">
             <CardContent className="pt-6">
               <div className="space-y-4">
-                <Button className="w-full bg-blue-600 hover:bg-blue-700" size="lg">
-                  <Mail className="w-4 h-4 mr-2" />
-                  Email Contact
+                <Button className="w-full bg-blue-600 hover:bg-blue-700" size="lg" asChild>
+                  <a href="mailto:michael@example.com">
+                    <Mail className="w-4 h-4 mr-2" />
+                    Email Contact
+                  </a>
                 </Button>
                 <Button variant="outline" className="w-full" size="lg">
                   <Linkedin className="w-4 h-4 mr-2" />
@@ -212,7 +218,9 @@ const Index = () => {
               <p className="text-slate-300">© 2024 Michael J. Russell. All rights reserved.</p>
             </div>
             <div className="flex space-x-6">
-              <Mail className="w-5 h-5 text-slate-400 hover:text-white cursor-pointer transition-colors" />
+              <a href="mailto:michael@example.com">
+                <Mail className="w-5 h-5 text-slate-400 hover:text-white cursor-pointer transition-colors" />
+              </a>
               <Linkedin className="w-5 h-5 text-slate-400 hover:text-white cursor-pointer transition-colors" />
               <Globe className="w-5 h-5 text-slate-400 hover:text-white cursor-pointer transition-colors" />
             </div>
@@ -221,4 +229,5 @@ const Index = () => {
       </footer>
     </div>;
 };
+
 export default Index;
