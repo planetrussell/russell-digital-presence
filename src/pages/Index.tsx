@@ -47,13 +47,13 @@ const Index = () => {
             <div className="w-32 h-32 bg-gradient-to-br from-blue-600 to-blue-800 rounded-full mx-auto mb-6 flex items-center justify-center shadow-xl">
               <User className="w-16 h-16 text-white" />
             </div>
-            <h1 className="font-bold text-slate-900 mb-4 animate-fade-in text-3xl">
+            <h1 className="text-5xl font-bold text-slate-900 mb-4 animate-fade-in">
               Michael J. Russell
             </h1>
-            <p className="font-semibold mb-6 text-blue-500 text-xl">
+            <p className="text-2xl font-semibold mb-6 text-blue-500">
               Digital Director | Technical Leader | Congressional Operations
             </p>
-            <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed text-left">
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
               A seasoned technical professional with broad, diverse skills currently serving as Digital Director 
               for a senior member of the U.S. Congress. Combining deep technical expertise with strategic 
               leadership to drive digital transformation in government operations.
